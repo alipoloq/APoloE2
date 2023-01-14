@@ -9,11 +9,13 @@ function App() {
   return (
     /*Etiqueta padre y el body de la página*/
     /*Fragments*/
-    <>
+    <div className="container mx-auto mt-20">
      <Header/>
-     <Formulario/>
-     <ListaDePacientes/>
-    </>
+     <div className="mt-12 md:flex">
+       <Formulario/>
+       <ListaDePacientes/>
+     </div> 
+    </div>
   )
 }
 /*Export para importar el módulo a otras partes de la app*/

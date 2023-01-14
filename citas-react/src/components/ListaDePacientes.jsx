@@ -1,11 +1,9 @@
-import React from 'react'
 
 function ListaDePacientes() {
   return (
-    <>
-        <div>ListaDePacientes</div>
-        <h1>Tarea hecha</h1>
-    </>
+    <div className='w-1/2 lg:w-3/5'>
+        <h2 className='text-green-300 font-bold'>Listado Pacientes</h2>
+    </div>
   )
 }
 
