@@ -2,7 +2,9 @@
 import Formulario from "./components/Formulario"
 import Header from "./components/Header"
 import ListaDePacientes from "./components/ListaDePacientes"
-/*Funcion creadora de la aplicación*/
+import Pacientes from "./components/Pacientes"
+
+Pacientes/*Funcion creadora de la aplicación*/
 function App() {
   /*estado de retorno constante*/
   /*Podemos crear funciones antes del return*/
