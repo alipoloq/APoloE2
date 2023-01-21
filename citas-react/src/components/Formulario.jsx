@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import Error from "./Error";
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
   const [email, setEmail] = useState('');
@@ -19,6 +20,27 @@ const Formulario = () => {
     return;
   }
     setError(false);
+
+  //objeto de paciente - enviar al arreglo
+  const objetoPaciente = {
+    nombre,
+    propietario,
+    email,
+    fingreso, 
+    sintomas
+  }
+
+  //console.log(obetoPaciente);
+  
+  setPacientes([...pacientes, objetoPaciente])
+
+  //Limpieza de hooks - useState de cada uno
+  setNombre('')
+  setPropietario('')
+  setEmail('')
+  setFingreso('')
+  setSintomas('')
+
   }
 
   return (
@@ -31,8 +53,7 @@ const Formulario = () => {
         <span className="text-violet-400 font-bold">Administralos</span>
       </p>
       <form className="bg-gray-100 shadow-md rounded-lg py-10 px-5 mb-10" onSubmit={handleSubmit}>
-        {error && (<div className="bg-red-800 text-white p-3 uppercase text-center font-bold rounded-md">
-          <p>Todos los campos son obligatorios</p></div>)}
+        {error && <Error><p>Todos los campos son obligatorios</p></Error>}
         <div className="mb-5">
           <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">Nombre mascota:</label>
           <input id="mascota" type="text" className="border-2 w-full p-2 mt-2 placeholder-gray-500 rounded-md" placeholder="Nombre de la mascota" value={nombre} 

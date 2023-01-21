@@ -3,19 +3,27 @@ import Formulario from "./components/Formulario"
 import Header from "./components/Header"
 import ListaDePacientes from "./components/ListaDePacientes"
 import Pacientes from "./components/Pacientes"
+import { useState } from "react"
 
 Pacientes/*Funcion creadora de la aplicación*/
 function App() {
   /*estado de retorno constante*/
   /*Podemos crear funciones antes del return*/
+  const [pacientes, setPacientes] = useState([]);
+
   return (
     /*Etiqueta padre y el body de la página*/
     /*Fragments*/
     <div className="container mx-auto mt-20">
      <Header/>
      <div className="mt-12 md:flex">
-       <Formulario/>
-       <ListaDePacientes/>
+       <Formulario 
+          pacientes = {pacientes}
+          setPacientes = {setPacientes}
+       />
+       <ListaDePacientes
+          pacientes = {pacientes}
+       />
      </div> 
     </div>
   )
