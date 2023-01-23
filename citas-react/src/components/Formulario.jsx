@@ -50,7 +50,7 @@ const Formulario = ({pacientes, setPacientes}) => {
       </h2>
       <p className="text-lg mt-5 text-center mb-10">
         Añade Pacientes{' '}
-        <span className="text-violet-400 font-bold">Administralos</span>
+        <span className="text-blue-400 font-bold">Administralos</span>
       </p>
       <form className="bg-gray-100 shadow-md rounded-lg py-10 px-5 mb-10" onSubmit={handleSubmit}>
         {error && <Error><p>Todos los campos son obligatorios</p></Error>}
