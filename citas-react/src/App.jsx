@@ -10,6 +10,8 @@ function App() {
   /*estado de retorno constante*/
   /*Podemos crear funciones antes del return*/
   const [pacientes, setPacientes] = useState([]);
+  //extraer valores con la tarjeta para editar y eliminar
+  const [paciente, setPaciente] = useState({});
 
   return (
     /*Etiqueta padre y el body de la página*/
@@ -20,9 +22,11 @@ function App() {
        <Formulario 
           pacientes = {pacientes}
           setPacientes = {setPacientes}
+          paciente = {paciente}
        />
        <ListaDePacientes
           pacientes = {pacientes}
+          setPaciente = {setPaciente}
        />
      </div> 
     </div>
