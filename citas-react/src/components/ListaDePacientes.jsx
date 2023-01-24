@@ -25,8 +25,8 @@ function ListaDePacientes({pacientes, setPaciente}) {
       : 
       <>
         <h2 className='text-green-300 font-black text-3xl text-center'>No hay pacientes</h2>
-        <p className="text-xl mt-5 mb-10 text-center">Agrega pacientes {' '}
-          <span className="text-cyan-600 font-bold">Aparecerán en este espacio</span>
+        <p className="text-xl mt-5 mb-10 text-center">Comienza agregando pacientes {' '}
+          <span className="text-cyan-600 font-bold">y aparecerán en este espacio</span>
         </p>
       </>
       }
