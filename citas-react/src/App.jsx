@@ -12,6 +12,12 @@ function App() {
   const [pacientes, setPacientes] = useState([]);
   //extraer valores con la tarjeta para editar y eliminar
   const [paciente, setPaciente] = useState({});
+  //Eliminar paciente
+  const eliminarPaciente = id =>{
+    //console.log('Eliminando paciente', id);
+    const pacientesActualizados = pacientes.filter(paciente => paciente.id!== id);
+    setPacientes(pacientesActualizados)
+  }
 
   return (
     /*Etiqueta padre y el body de la página*/
@@ -28,6 +34,7 @@ function App() {
        <ListaDePacientes
           pacientes = {pacientes}
           setPaciente = {setPaciente}
+          eliminarPaciente = {eliminarPaciente}
        />
      </div> 
     </div>

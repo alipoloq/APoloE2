@@ -1,7 +1,7 @@
 import { PureComponent } from "react"
 import Pacientes from "./Pacientes"
 
-function ListaDePacientes({pacientes, setPaciente}) {
+function ListaDePacientes({pacientes, setPaciente, eliminarPaciente}) {
   //formulas para id unico
   //Date.now().toString(36)
   //Math.random().toString(36).substr(2)
@@ -19,6 +19,7 @@ function ListaDePacientes({pacientes, setPaciente}) {
             key = {indice.id} 
             indice = {indice}
             setPaciente = {setPaciente}
+            eliminarPaciente = {eliminarPaciente}
           />
         )}
       </>
